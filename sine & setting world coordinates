@@ -1,0 +1,14 @@
+import math
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor('lightblue')
+wn.setworldcoordinates(0, -1.25, 360, 1.25)
+
+
+fred = turtle.Turtle()
+
+for angle in range(361):
+    sine = math.sin(math.radians(angle))
+    print(sine)
+    fred.goto(angle,sine)
