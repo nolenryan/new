@@ -1,0 +1,29 @@
+import turtle
+
+def movedis(t, d):
+    y = d**2 + d**2
+    b = y**0.5
+    c = b/2
+    return c
+    
+def drawsqr(t, s):
+    for i in range(4):
+        t.left(90)
+        t.forward(s)
+        
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+a = turtle.Turtle()
+a.color('hotpink')
+a.pensize(3)
+
+size = 20
+for i in range(5):
+    drawsqr(a, size)
+    size = size + 20
+    a.penup()
+    a.right(45)
+    a.forward(movedis(a, 20))
+    a.left (45)
+    a.pendown()
